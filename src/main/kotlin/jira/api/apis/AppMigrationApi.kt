@@ -20,7 +20,6 @@ interface AppMigrationApi {
      */
     @POST("/rest/atlassian-connect/1/migration/workflow/rule/search")
     suspend fun migrationResourceWorkflowRuleSearchPost(
-        @Body Atlassian-Transfer-Id: String,
-    @Body workflowRulesSearch: WorkflowRulesSearch
+        @Body workflowRulesSearch: WorkflowRulesSearch
     ): WorkflowRulesSearchDetails
 }
