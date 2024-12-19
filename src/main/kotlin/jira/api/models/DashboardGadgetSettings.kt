@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of the settings for a dashboard gadget.
@@ -21,7 +22,7 @@ data class DashboardGadgetSettings(
     @SerialName("color") val color: String? = null,
     @SerialName("ignoreUriAndModuleKeyValidation") val ignoreUriAndModuleKeyValidation: Boolean? = null,
     @SerialName("moduleKey") val moduleKey: String? = null,
-    @SerialName("position") val position: position? = null,
+    @SerialName("position") val position: DashboardGadgetPosition? = null,
     @SerialName("title") val title: String? = null,
     @SerialName("uri") val uri: String? = null
 )

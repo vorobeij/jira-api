@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  *
@@ -13,6 +14,6 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class JiraExpressionEvalRequestBean(
-    @SerialName("context") val context: context? = null,
+    @SerialName("context") val context: JiraExpressionEvalContextBean? = null,
     @SerialName("expression") val expression: String
 )

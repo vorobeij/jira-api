@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of a permission scheme.
@@ -24,6 +25,6 @@ data class PermissionScheme(
     @SerialName("id") val id: Long? = null,
     @SerialName("name") val name: String,
     @SerialName("permissions") val permissions: List<PermissionGrant>? = null,
-    @SerialName("scope") val scope: scope? = null,
+    @SerialName("scope") val scope: Scope? = null,
     @SerialName("self") val self: String? = null
 )

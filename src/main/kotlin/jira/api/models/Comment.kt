@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * A comment.
@@ -24,8 +25,8 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class Comment(
-    @SerialName("author") val author: author? = null,
-    @SerialName("body") val body: body? = null,
+    @SerialName("author") val author: UserDetails? = null,
+    @SerialName("body") val body: String? = null,
     @SerialName("created") val created: String? = null,
     @SerialName("id") val id: String? = null,
     @SerialName("jsdAuthorCanSeeRequest") val jsdAuthorCanSeeRequest: Boolean? = null,
@@ -33,7 +34,7 @@ data class Comment(
     @SerialName("properties") val properties: List<EntityProperty>? = null,
     @SerialName("renderedBody") val renderedBody: String? = null,
     @SerialName("self") val self: String? = null,
-    @SerialName("updateAuthor") val updateAuthor: updateAuthor? = null,
+    @SerialName("updateAuthor") val updateAuthor: UserDetails? = null,
     @SerialName("updated") val updated: String? = null,
-    @SerialName("visibility") val visibility: visibility? = null
+    @SerialName("visibility") val visibility: Visibility? = null
 )

@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Issue type screen scheme with a list of the projects that use it.
@@ -14,6 +15,6 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class IssueTypeScreenSchemesProjects(
-    @SerialName("issueTypeScreenScheme") val issueTypeScreenScheme: issueTypeScreenScheme,
+    @SerialName("issueTypeScreenScheme") val issueTypeScreenScheme: IssueTypeScreenScheme,
     @SerialName("projectIds") val projectIds: List<String>
 )

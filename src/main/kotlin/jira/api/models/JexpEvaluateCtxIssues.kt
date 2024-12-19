@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The JQL specifying the issues available in the evaluated Jira expression under the `issues` context variable. This bean will be replacing `JexpIssues` bean as part of new `evaluate` endpoint
@@ -13,5 +14,5 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class JexpEvaluateCtxIssues(
-    @SerialName("jql") val jql: jql? = null
+    @SerialName("jql") val jql: JexpEvaluateCtxJqlIssues? = null
 )

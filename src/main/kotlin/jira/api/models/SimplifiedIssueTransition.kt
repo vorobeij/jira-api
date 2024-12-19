@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  *
@@ -14,7 +15,7 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class SimplifiedIssueTransition(
-    @SerialName("to") val to: to? = null,
+    @SerialName("to") val to: IssueTransitionStatus? = null,
     @SerialName("transitionId") val transitionId: Int? = null,
     @SerialName("transitionName") val transitionName: String? = null
 )

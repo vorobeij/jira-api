@@ -21,7 +21,7 @@ interface JiraSettingsApi {
      * @return List<ApplicationProperty>
      */
     @GET("/rest/api/3/application-properties/advanced-settings")
-    suspend fun getAdvancedSettings(): List<ApplicationProperty>
+    suspend fun GetAdvancedSettings(): List<ApplicationProperty>
 
     /**
      * GET /rest/api/3/application-properties
@@ -38,7 +38,7 @@ interface JiraSettingsApi {
      * @return List<ApplicationProperty>
      */
     @GET("/rest/api/3/application-properties")
-    suspend fun getApplicationProperty(
+    suspend fun GetApplicationProperty(
         @Query("key") key: String? = null,
         @Query("permissionLevel") permissionLevel: String? = null,
         @Query("keyFilter") keyFilter: String? = null
@@ -54,5 +54,5 @@ interface JiraSettingsApi {
      * @return Configuration
      */
     @GET("/rest/api/3/configuration")
-    suspend fun getConfiguration(): Configuration
+    suspend fun GetConfiguration(): Configuration
 }

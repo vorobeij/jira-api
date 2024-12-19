@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of a user or group subscribing to a filter.
@@ -15,7 +16,7 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class FilterSubscription(
-    @SerialName("group") val group: group? = null,
+    @SerialName("group") val group: GroupName? = null,
     @SerialName("id") val id: Long? = null,
-    @SerialName("user") val user: user? = null
+    @SerialName("user") val user: User? = null
 )

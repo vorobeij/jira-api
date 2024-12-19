@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about the configuration of Jira.
@@ -23,7 +24,7 @@ data class Configuration(
     @SerialName("attachmentsEnabled") val attachmentsEnabled: Boolean? = null,
     @SerialName("issueLinkingEnabled") val issueLinkingEnabled: Boolean? = null,
     @SerialName("subTasksEnabled") val subTasksEnabled: Boolean? = null,
-    @SerialName("timeTrackingConfiguration") val timeTrackingConfiguration: timeTrackingConfiguration? = null,
+    @SerialName("timeTrackingConfiguration") val timeTrackingConfiguration: TimeTrackingConfiguration? = null,
     @SerialName("timeTrackingEnabled") val timeTrackingEnabled: Boolean? = null,
     @SerialName("unassignedIssuesAllowed") val unassignedIssuesAllowed: Boolean? = null,
     @SerialName("votingEnabled") val votingEnabled: Boolean? = null,

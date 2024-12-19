@@ -41,7 +41,7 @@ interface IssueCustomFieldConfigurationAppsApi {
      * @return PageBeanContextualConfiguration
      */
     @GET("/rest/api/3/app/field/{fieldIdOrKey}/context/configuration")
-    suspend fun getCustomFieldConfiguration(
+    suspend fun GetCustomFieldConfiguration(
         @Body fieldIdOrKey: String,
         @Query("id") id: List<Long>? = null,
         @Query("fieldContextId") fieldContextId: List<Long>? = null,
@@ -79,7 +79,7 @@ interface IssueCustomFieldConfigurationAppsApi {
      * @return PageBeanBulkContextualConfiguration
      */
     @POST("/rest/api/3/app/field/context/configuration/list")
-    suspend fun getCustomFieldsConfigurations(
+    suspend fun GetCustomFieldsConfigurations(
         @Query("id") id: List<Long>? = null,
         @Query("fieldContextId") fieldContextId: List<Long>? = null,
         @Query("issueId") issueId: Long? = null,

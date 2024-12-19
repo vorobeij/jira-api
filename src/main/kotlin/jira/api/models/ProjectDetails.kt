@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about a project.
@@ -20,11 +21,11 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class ProjectDetails(
-    @SerialName("avatarUrls") val avatarUrls: avatarUrls? = null,
+    @SerialName("avatarUrls") val avatarUrls: AvatarUrlsBean? = null,
     @SerialName("id") val id: String? = null,
     @SerialName("key") val key: String? = null,
     @SerialName("name") val name: String? = null,
-    @SerialName("projectCategory") val projectCategory: projectCategory? = null,
+    @SerialName("projectCategory") val projectCategory: UpdatedProjectCategory? = null,
     @SerialName("projectTypeKey") val projectTypeKey: String? = null,
     @SerialName("self") val self: String? = null,
     @SerialName("simplified") val simplified: Boolean? = null

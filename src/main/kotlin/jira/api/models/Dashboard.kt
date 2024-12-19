@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of a dashboard.
@@ -33,7 +34,7 @@ data class Dashboard(
     @SerialName("isFavourite") val isFavourite: Boolean? = null,
     @SerialName("isWritable") val isWritable: Boolean? = null,
     @SerialName("name") val name: String? = null,
-    @SerialName("owner") val owner: owner? = null,
+    @SerialName("owner") val owner: UserBean? = null,
     @SerialName("popularity") val popularity: Long? = null,
     @SerialName("rank") val rank: Int? = null,
     @SerialName("self") val self: String? = null,

@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Issue security level member.
@@ -17,7 +18,7 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class SecurityLevelMember(
-    @SerialName("holder") val holder: holder,
+    @SerialName("holder") val holder: PermissionHolder,
     @SerialName("id") val id: String,
     @SerialName("issueSecurityLevelId") val issueSecurityLevelId: String,
     @SerialName("issueSecuritySchemeId") val issueSecuritySchemeId: String,

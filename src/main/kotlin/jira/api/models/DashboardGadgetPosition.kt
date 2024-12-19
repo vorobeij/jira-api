@@ -4,18 +4,17 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of a gadget position.
  *
- * @param the column position of the gadget., required
- * @param the row position of the gadget., required
+ * @param theColumnPositionOfTheGadget, required
+ * @param theRowPositionOfTheGadget, required
  */
 @Serializable
 data class DashboardGadgetPosition(
-    @SerialName("the column position of the gadget.") val the column position of the gadget. : Int,
-    @SerialName("the row position of the gadget.")
-
-val the row position of the gadget.: Int
+    @SerialName("theColumnPositionOfTheGadget") val theColumnPositionOfTheGadget: Int,
+    @SerialName("theRowPositionOfTheGadget") val theRowPositionOfTheGadget: Int
 )

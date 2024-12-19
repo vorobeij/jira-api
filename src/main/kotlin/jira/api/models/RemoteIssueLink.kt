@@ -18,12 +18,10 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class RemoteIssueLink(
-    @SerialName("application") val application: application? = null,
+    @SerialName("application") val application: Application? = null,
     @SerialName("globalId") val globalId: String? = null,
     @SerialName("id") val id: Long? = null,
-    @SerialName("object") val object: object? = null,
-@SerialName("relationship")
-val relationship: String? = null,
-@SerialName("self")
-val self: String? = null
+    @SerialName("object") val object: RemoteObject? = null,
+    @SerialName("relationship") val relationship: String? = null,
+    @SerialName("self") val self: String? = null
 )

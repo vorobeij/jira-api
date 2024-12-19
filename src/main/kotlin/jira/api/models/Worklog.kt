@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of a worklog.
@@ -25,8 +26,8 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class Worklog(
-    @SerialName("author") val author: author? = null,
-    @SerialName("comment") val comment: comment? = null,
+    @SerialName("author") val author: UserDetails? = null,
+    @SerialName("comment") val comment: String? = null,
     @SerialName("created") val created: String? = null,
     @SerialName("id") val id: String? = null,
     @SerialName("issueId") val issueId: String? = null,
@@ -35,7 +36,7 @@ data class Worklog(
     @SerialName("started") val started: String? = null,
     @SerialName("timeSpent") val timeSpent: String? = null,
     @SerialName("timeSpentSeconds") val timeSpentSeconds: Long? = null,
-    @SerialName("updateAuthor") val updateAuthor: updateAuthor? = null,
+    @SerialName("updateAuthor") val updateAuthor: UserDetails? = null,
     @SerialName("updated") val updated: String? = null,
-    @SerialName("visibility") val visibility: visibility? = null
+    @SerialName("visibility") val visibility: Visibility? = null
 )

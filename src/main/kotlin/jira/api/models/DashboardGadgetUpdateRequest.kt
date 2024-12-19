@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The details of the gadget to update.
@@ -16,6 +17,6 @@ import kotlinx.serialization.*
 @Serializable
 data class DashboardGadgetUpdateRequest(
     @SerialName("color") val color: String? = null,
-    @SerialName("position") val position: position? = null,
+    @SerialName("position") val position: DashboardGadgetPosition? = null,
     @SerialName("title") val title: String? = null
 )

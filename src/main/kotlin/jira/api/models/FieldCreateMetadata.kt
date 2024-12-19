@@ -23,15 +23,15 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class FieldCreateMetadata(
-    @SerialName("allowedValues") val allowedValues: List<null>? = null,
+    @SerialName("allowedValues") val allowedValues: List<String>? = null,
     @SerialName("autoCompleteUrl") val autoCompleteUrl: String? = null,
     @SerialName("configuration") val configuration: configuration? = null,
-    @SerialName("defaultValue") val defaultValue: defaultValue? = null,
+    @SerialName("defaultValue") val defaultValue: String? = null,
     @SerialName("fieldId") val fieldId: String,
     @SerialName("hasDefaultValue") val hasDefaultValue: Boolean? = null,
     @SerialName("key") val key: String,
     @SerialName("name") val name: String,
     @SerialName("operations") val operations: List<String>,
     @SerialName("required") val required: Boolean,
-    @SerialName("schema") val schema: schema
+    @SerialName("schema") val schema: JsonTypeBean
 )

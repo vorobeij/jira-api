@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of a gadget.
@@ -21,7 +22,7 @@ data class DashboardGadget(
     @SerialName("color") val color: String,
     @SerialName("id") val id: Long,
     @SerialName("moduleKey") val moduleKey: String? = null,
-    @SerialName("position") val position: position,
+    @SerialName("position") val position: DashboardGadgetPosition,
     @SerialName("title") val title: String,
     @SerialName("uri") val uri: String? = null
 )

@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * An issue priority.
@@ -27,7 +28,7 @@ data class Priority(
     @SerialName("id") val id: String? = null,
     @SerialName("isDefault") val isDefault: Boolean? = null,
     @SerialName("name") val name: String? = null,
-    @SerialName("schemes") val schemes: schemes? = null,
+    @SerialName("schemes") val schemes: ExpandPrioritySchemePage? = null,
     @SerialName("self") val self: String? = null,
     @SerialName("statusColor") val statusColor: String? = null
 )

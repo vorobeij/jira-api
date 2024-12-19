@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  *
@@ -96,21 +97,21 @@ data class JiraIssueFields(
     @SerialName("colorFields") val colorFields: List<JiraColorField>? = null,
     @SerialName("datePickerFields") val datePickerFields: List<JiraDateField>? = null,
     @SerialName("dateTimePickerFields") val dateTimePickerFields: List<JiraDateTimeField>? = null,
-    @SerialName("issueType") val issueType: issueType? = null,
+    @SerialName("issueType") val issueType: JiraIssueTypeField? = null,
     @SerialName("labelsFields") val labelsFields: List<JiraLabelsField>? = null,
     @SerialName("multipleGroupPickerFields") val multipleGroupPickerFields: List<JiraMultipleGroupPickerField>? = null,
     @SerialName("multipleSelectClearableUserPickerFields") val multipleSelectClearableUserPickerFields: List<JiraMultipleSelectUserPickerField>? = null,
     @SerialName("multipleSelectFields") val multipleSelectFields: List<JiraMultipleSelectField>? = null,
     @SerialName("multipleVersionPickerFields") val multipleVersionPickerFields: List<JiraMultipleVersionPickerField>? = null,
-    @SerialName("multiselectComponents") val multiselectComponents: multiselectComponents? = null,
-    @SerialName("originalEstimateField") val originalEstimateField: originalEstimateField? = null,
-    @SerialName("priority") val priority: priority? = null,
+    @SerialName("multiselectComponents") val multiselectComponents: JiraMultiSelectComponentField? = null,
+    @SerialName("originalEstimateField") val originalEstimateField: JiraDurationField? = null,
+    @SerialName("priority") val priority: JiraPriorityField? = null,
     @SerialName("richTextFields") val richTextFields: List<JiraRichTextField>? = null,
     @SerialName("singleGroupPickerFields") val singleGroupPickerFields: List<JiraSingleGroupPickerField>? = null,
     @SerialName("singleLineTextFields") val singleLineTextFields: List<JiraSingleLineTextField>? = null,
     @SerialName("singleSelectClearableUserPickerFields") val singleSelectClearableUserPickerFields: List<JiraSingleSelectUserPickerField>? = null,
     @SerialName("singleSelectFields") val singleSelectFields: List<JiraSingleSelectField>? = null,
     @SerialName("singleVersionPickerFields") val singleVersionPickerFields: List<JiraSingleVersionPickerField>? = null,
-    @SerialName("timeTrackingField") val timeTrackingField: timeTrackingField? = null,
+    @SerialName("timeTrackingField") val timeTrackingField: JiraTimeTrackingField? = null,
     @SerialName("urlFields") val urlFields: List<JiraUrlField>? = null
 )

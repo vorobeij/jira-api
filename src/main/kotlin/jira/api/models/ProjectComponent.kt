@@ -42,19 +42,19 @@ Optional when creating or updating a component.
 @Serializable
 data class ProjectComponent(
     @SerialName("ari") val ari: String? = null,
-    @SerialName("assignee") val assignee: assignee? = null,
+    @SerialName("assignee") val assignee: User? = null,
     @SerialName("assigneeType") val assigneeType: String? = null,
     @SerialName("description") val description: String? = null,
     @SerialName("id") val id: String? = null,
     @SerialName("isAssigneeTypeValid") val isAssigneeTypeValid: Boolean? = null,
-    @SerialName("lead") val lead: lead? = null,
+    @SerialName("lead") val lead: User? = null,
     @SerialName("leadAccountId") val leadAccountId: String? = null,
     @SerialName("leadUserName") val leadUserName: String? = null,
     @SerialName("metadata") val metadata: metadata? = null,
     @SerialName("name") val name: String? = null,
     @SerialName("project") val project: String? = null,
     @SerialName("projectId") val projectId: Long? = null,
-    @SerialName("realAssignee") val realAssignee: realAssignee? = null,
+    @SerialName("realAssignee") val realAssignee: User? = null,
     @SerialName("realAssigneeType") val realAssigneeType: String? = null,
     @SerialName("self") val self: String? = null
 )

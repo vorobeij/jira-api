@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The projects the item is associated with. Indicated for items associated with [next-gen projects](https://confluence.atlassian.com/x/loMyO).
@@ -14,6 +15,6 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class Scope(
-    @SerialName("project") val project: project? = null,
+    @SerialName("project") val project: ProjectDetails? = null,
     @SerialName("type") val type: String? = null
 )

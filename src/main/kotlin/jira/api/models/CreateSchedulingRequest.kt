@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  *
@@ -17,8 +18,8 @@ import kotlinx.serialization.*
 @Serializable
 data class CreateSchedulingRequest(
     @SerialName("dependencies") val dependencies: String? = null,
-    @SerialName("endDate") val endDate: endDate? = null,
+    @SerialName("endDate") val endDate: CreateDateFieldRequest? = null,
     @SerialName("estimation") val estimation: String,
     @SerialName("inferredDates") val inferredDates: String? = null,
-    @SerialName("startDate") val startDate: startDate? = null
+    @SerialName("startDate") val startDate: CreateDateFieldRequest? = null
 )

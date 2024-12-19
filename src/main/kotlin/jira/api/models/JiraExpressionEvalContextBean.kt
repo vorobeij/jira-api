@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  *
@@ -27,9 +28,9 @@ data class JiraExpressionEvalContextBean(
     @SerialName("board") val board: Long? = null,
     @SerialName("custom") val custom: List<CustomContextVariable>? = null,
     @SerialName("customerRequest") val customerRequest: Long? = null,
-    @SerialName("issue") val issue: issue? = null,
-    @SerialName("issues") val issues: issues? = null,
-    @SerialName("project") val project: project? = null,
+    @SerialName("issue") val issue: IdOrKeyBean? = null,
+    @SerialName("issues") val issues: JexpIssues? = null,
+    @SerialName("project") val project: IdOrKeyBean? = null,
     @SerialName("serviceDesk") val serviceDesk: Long? = null,
     @SerialName("sprint") val sprint: Long? = null
 )

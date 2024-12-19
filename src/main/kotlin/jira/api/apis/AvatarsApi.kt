@@ -26,7 +26,7 @@ interface AvatarsApi {
      * @return SystemAvatars
      */
     @GET("/rest/api/3/avatar/{type}/system")
-    suspend fun getAllSystemAvatars(
+    suspend fun GetAllSystemAvatars(
         @Body type: String
     ): SystemAvatars
 
@@ -51,7 +51,7 @@ interface AvatarsApi {
      * @return Unit
      */
     @GET("/rest/api/3/universal_avatar/view/type/{type}/avatar/{id}")
-    suspend fun getAvatarImageByID(
+    suspend fun GetAvatarImageByID(
         @Body type: String,
         @Body id: Long,
         @Query("size") size: String? = null,
@@ -79,7 +79,7 @@ interface AvatarsApi {
      * @return Unit
      */
     @GET("/rest/api/3/universal_avatar/view/type/{type}/owner/{entityId}")
-    suspend fun getAvatarImageByOwner(
+    suspend fun GetAvatarImageByOwner(
         @Body type: String,
         @Body entityId: String,
         @Query("size") size: String? = null,
@@ -101,7 +101,7 @@ interface AvatarsApi {
      * @return Unit
      */
     @GET("/rest/api/3/universal_avatar/view/type/{type}")
-    suspend fun getAvatarImageByType(
+    suspend fun GetAvatarImageByType(
         @Body type: String,
         @Query("size") size: String? = null,
         @Query("format") format: String? = null
@@ -126,7 +126,7 @@ interface AvatarsApi {
      * @return Avatars
      */
     @GET("/rest/api/3/universal_avatar/type/{type}/owner/{entityId}")
-    suspend fun getAvatars(
+    suspend fun GetAvatars(
         @Body type: String,
         @Body entityId: String
     ): Avatars
@@ -174,7 +174,7 @@ interface AvatarsApi {
      * @return Unit
      */
     @POST("/rest/api/3/universal_avatar/type/{type}/owner/{entityId}")
-    suspend fun storeAvatar(
+    suspend fun StoreAvatar(
         @Body type: String,
         @Body entityId: String,
         @Query("x") x: Int = 0,

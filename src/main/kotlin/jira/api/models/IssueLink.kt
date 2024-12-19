@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of a link between issues.
@@ -18,8 +19,8 @@ import kotlinx.serialization.*
 @Serializable
 data class IssueLink(
     @SerialName("id") val id: String? = null,
-    @SerialName("inwardIssue") val inwardIssue: inwardIssue,
-    @SerialName("outwardIssue") val outwardIssue: outwardIssue,
+    @SerialName("inwardIssue") val inwardIssue: LinkedIssue,
+    @SerialName("outwardIssue") val outwardIssue: LinkedIssue,
     @SerialName("self") val self: String? = null,
-    @SerialName("type") val type: type
+    @SerialName("type") val type: IssueLinkType
 )

@@ -10,17 +10,17 @@ import kotlinx.serialization.Serializable
 /**
  * A paginated list of users sharing the filter. This includes users that are members of the groups or can browse the projects that the filter is shared with.
  *
- * @param end-index, optional, The index of the last item returned on the page.
+ * @param endIndex, optional, The index of the last item returned on the page.
  * @param items, optional, The list of items.
- * @param max-results, optional, The maximum number of results that could be on the page.
+ * @param maxResults, optional, The maximum number of results that could be on the page.
  * @param size, optional, The number of items on the page.
- * @param start-index, optional, The index of the first item returned on the page.
+ * @param startIndex, optional, The index of the first item returned on the page.
  */
 @Serializable
 data class UserList(
-    @SerialName("end-index") val end-index: Int? = null,
+    @SerialName("endIndex") val endIndex: Int? = null,
     @SerialName("items") val items: List<User>? = null,
-    @SerialName("max-results") val max-results: Int? = null,
+    @SerialName("maxResults") val maxResults: Int? = null,
     @SerialName("size") val size: Int? = null,
-    @SerialName("start-index") val start-index: Int? = null
+    @SerialName("startIndex") val startIndex: Int? = null
 )

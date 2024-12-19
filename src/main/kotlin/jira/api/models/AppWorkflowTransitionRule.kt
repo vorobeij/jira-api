@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * A workflow transition rule.
@@ -19,5 +20,5 @@ data class AppWorkflowTransitionRule(
     @SerialName("ruleConfiguration") val ruleConfiguration: RuleConfiguration? = null,
     @SerialName("id") val id: String,
     @SerialName("key") val key: String,
-    @SerialName("transition") val transition: transition? = null
+    @SerialName("transition") val transition: WorkflowTransition? = null
 )

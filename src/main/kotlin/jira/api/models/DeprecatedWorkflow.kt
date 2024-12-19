@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about a workflow.
@@ -26,6 +27,6 @@ data class DeprecatedWorkflow(
     @SerialName("lastModifiedUser") val lastModifiedUser: String? = null,
     @SerialName("lastModifiedUserAccountId") val lastModifiedUserAccountId: String? = null,
     @SerialName("name") val name: String? = null,
-    @SerialName("scope") val scope: scope? = null,
+    @SerialName("scope") val scope: Scope? = null,
     @SerialName("steps") val steps: Int? = null
 )

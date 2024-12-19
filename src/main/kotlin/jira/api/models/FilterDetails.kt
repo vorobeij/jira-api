@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of a filter.
@@ -36,7 +37,7 @@ data class FilterDetails(
     @SerialName("id") val id: String? = null,
     @SerialName("jql") val jql: String? = null,
     @SerialName("name") val name: String,
-    @SerialName("owner") val owner: owner? = null,
+    @SerialName("owner") val owner: User? = null,
     @SerialName("searchUrl") val searchUrl: String? = null,
     @SerialName("self") val self: String? = null,
     @SerialName("sharePermissions") val sharePermissions: List<SharePermission>? = null,

@@ -18,8 +18,8 @@ import kotlinx.serialization.*
 @Serializable
 data class IssueUpdateDetails(
     @SerialName("fields") val fields: fields? = null,
-    @SerialName("historyMetadata") val historyMetadata: historyMetadata? = null,
+    @SerialName("historyMetadata") val historyMetadata: HistoryMetadata? = null,
     @SerialName("properties") val properties: List<EntityProperty>? = null,
-    @SerialName("transition") val transition: transition? = null,
+    @SerialName("transition") val transition: IssueTransition? = null,
     @SerialName("update") val update: update? = null
 )

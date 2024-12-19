@@ -22,7 +22,7 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class AttachmentMetadata(
-    @SerialName("author") val author: author? = null,
+    @SerialName("author") val author: User? = null,
     @SerialName("content") val content: String? = null,
     @SerialName("created") val created: String? = null,
     @SerialName("filename") val filename: String? = null,

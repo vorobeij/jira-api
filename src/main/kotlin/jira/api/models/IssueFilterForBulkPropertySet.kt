@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Bulk operation filter details.
@@ -15,7 +16,7 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class IssueFilterForBulkPropertySet(
-    @SerialName("currentValue") val currentValue: currentValue? = null,
+    @SerialName("currentValue") val currentValue: String? = null,
     @SerialName("entityIds") val entityIds: List<Long>? = null,
     @SerialName("hasProperty") val hasProperty: Boolean? = null
 )

@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of an issue transition.
@@ -33,5 +34,5 @@ data class IssueTransition(
     @SerialName("isInitial") val isInitial: Boolean? = null,
     @SerialName("looped") val looped: Boolean? = null,
     @SerialName("name") val name: String? = null,
-    @SerialName("to") val to: to? = null
+    @SerialName("to") val to: StatusDetails? = null
 )

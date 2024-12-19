@@ -20,9 +20,8 @@ The maximum length is 255 characters.
  */
 @Serializable
 data class RemoteIssueLinkRequest(
-    @SerialName("application") val application: application? = null,
+    @SerialName("application") val application: Application? = null,
     @SerialName("globalId") val globalId: String? = null,
-    @SerialName("object") val object: object,
-@SerialName("relationship")
-val relationship: String? = null
+    @SerialName("object") val object: RemoteObject,
+    @SerialName("relationship") val relationship: String? = null
 )

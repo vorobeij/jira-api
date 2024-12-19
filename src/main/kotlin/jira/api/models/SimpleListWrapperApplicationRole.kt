@@ -11,7 +11,7 @@ import kotlinx.serialization.Serializable
  *
  * @param listWrapperCallbackApplicationRole, optional
  * @param items, optional
- * @param max-results, optional
+ * @param maxResults, optional
  * @param listWrapperCallbackApplicationRole, optional
  * @param size, optional
  */
@@ -19,7 +19,7 @@ import kotlinx.serialization.Serializable
 data class SimpleListWrapperApplicationRole(
     @SerialName("listWrapperCallbackApplicationRole") val listWrapperCallbackApplicationRole: ListWrapperCallbackApplicationRole? = null,
     @SerialName("items") val items: List<ApplicationRole>? = null,
-    @SerialName("max-results") val max-results: Int? = null,
+    @SerialName("maxResults") val maxResults: Int? = null,
     @SerialName("listWrapperCallbackApplicationRole") val listWrapperCallbackApplicationRole: ListWrapperCallbackApplicationRole? = null,
     @SerialName("size") val size: Int? = null
 )

@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  *
@@ -13,6 +14,6 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class GetPermissionResponse(
-    @SerialName("holder") val holder: holder,
+    @SerialName("holder") val holder: GetPermissionHolderResponse,
     @SerialName("type") val type: String
 )

@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  *
@@ -20,5 +21,5 @@ data class Group(
     @SerialName("groupId") val groupId: String? = null,
     @SerialName("name") val name: String? = null,
     @SerialName("self") val self: String? = null,
-    @SerialName("users") val users: users? = null
+    @SerialName("users") val users: PagedListUserDetailsApplicationUser? = null
 )

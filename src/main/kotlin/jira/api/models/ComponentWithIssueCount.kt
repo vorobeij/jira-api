@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about a component with a count of the issues it contains.
@@ -35,17 +36,17 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class ComponentWithIssueCount(
-    @SerialName("assignee") val assignee: assignee? = null,
+    @SerialName("assignee") val assignee: User? = null,
     @SerialName("assigneeType") val assigneeType: String? = null,
     @SerialName("description") val description: String? = null,
     @SerialName("id") val id: String? = null,
     @SerialName("isAssigneeTypeValid") val isAssigneeTypeValid: Boolean? = null,
     @SerialName("issueCount") val issueCount: Long? = null,
-    @SerialName("lead") val lead: lead? = null,
+    @SerialName("lead") val lead: User? = null,
     @SerialName("name") val name: String? = null,
     @SerialName("project") val project: String? = null,
     @SerialName("projectId") val projectId: Long? = null,
-    @SerialName("realAssignee") val realAssignee: realAssignee? = null,
+    @SerialName("realAssignee") val realAssignee: User? = null,
     @SerialName("realAssigneeType") val realAssigneeType: String? = null,
     @SerialName("self") val self: String? = null
 )

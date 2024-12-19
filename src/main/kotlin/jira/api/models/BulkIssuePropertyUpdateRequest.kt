@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Bulk issue property update request details.
@@ -16,6 +17,6 @@ import kotlinx.serialization.*
 @Serializable
 data class BulkIssuePropertyUpdateRequest(
     @SerialName("expression") val expression: String? = null,
-    @SerialName("filter") val filter: filter? = null,
-    @SerialName("value") val value: value? = null
+    @SerialName("filter") val filter: IssueFilterForBulkPropertySet? = null,
+    @SerialName("value") val value: String? = null
 )

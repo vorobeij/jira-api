@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of the updated priority scheme.
@@ -15,5 +16,5 @@ import kotlinx.serialization.*
 @Serializable
 data class UpdatePrioritySchemeResponseBean(
     @SerialName("prioritySchemeWithPaginatedPrioritiesAndProjects") val prioritySchemeWithPaginatedPrioritiesAndProjects: PrioritySchemeWithPaginatedPrioritiesAndProjects? = null,
-    @SerialName("task") val task: task? = null
+    @SerialName("task") val task: TaskProgressBeanJsonNode? = null
 )

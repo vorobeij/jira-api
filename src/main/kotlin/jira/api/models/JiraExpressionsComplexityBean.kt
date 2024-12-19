@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  *
@@ -15,8 +16,8 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class JiraExpressionsComplexityBean(
-    @SerialName("beans") val beans: beans,
-    @SerialName("expensiveOperations") val expensiveOperations: expensiveOperations,
-    @SerialName("primitiveValues") val primitiveValues: primitiveValues,
-    @SerialName("steps") val steps: steps
+    @SerialName("beans") val beans: JiraExpressionsComplexityValueBean,
+    @SerialName("expensiveOperations") val expensiveOperations: JiraExpressionsComplexityValueBean,
+    @SerialName("primitiveValues") val primitiveValues: JiraExpressionsComplexityValueBean,
+    @SerialName("steps") val steps: JiraExpressionsComplexityValueBean
 )

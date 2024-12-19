@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about an attachment.
@@ -21,7 +22,7 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class Attachment(
-    @SerialName("author") val author: author? = null,
+    @SerialName("author") val author: UserDetails? = null,
     @SerialName("content") val content: String? = null,
     @SerialName("created") val created: String? = null,
     @SerialName("filename") val filename: String? = null,

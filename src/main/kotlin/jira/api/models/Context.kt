@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * A context.
@@ -17,5 +18,5 @@ import kotlinx.serialization.*
 data class Context(
     @SerialName("id") val id: Long? = null,
     @SerialName("name") val name: String? = null,
-    @SerialName("scope") val scope: scope? = null
+    @SerialName("scope") val scope: Scope? = null
 )

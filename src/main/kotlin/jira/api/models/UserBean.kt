@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  *
@@ -22,7 +23,7 @@ The username of the user.
 data class UserBean(
     @SerialName("accountId") val accountId: String? = null,
     @SerialName("active") val active: Boolean? = null,
-    @SerialName("avatarUrls") val avatarUrls: avatarUrls? = null,
+    @SerialName("avatarUrls") val avatarUrls: UserBeanAvatarUrls? = null,
     @SerialName("displayName") val displayName: String? = null,
     @SerialName("key") val key: String? = null,
     @SerialName("name") val name: String? = null,

@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of a share permission for the filter.
@@ -28,10 +29,10 @@ For a request, specify the `id` for the role. You must also specify the `project
  */
 @Serializable
 data class SharePermission(
-    @SerialName("group") val group: group? = null,
+    @SerialName("group") val group: GroupName? = null,
     @SerialName("id") val id: Long? = null,
-    @SerialName("project") val project: project? = null,
-    @SerialName("role") val role: role? = null,
+    @SerialName("project") val project: Project? = null,
+    @SerialName("role") val role: ProjectRole? = null,
     @SerialName("type") val type: String,
-    @SerialName("user") val user: user? = null
+    @SerialName("user") val user: UserBean? = null
 )

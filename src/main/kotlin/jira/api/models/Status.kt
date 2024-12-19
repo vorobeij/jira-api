@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The status of the item.
@@ -14,6 +15,6 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class Status(
-    @SerialName("icon") val icon: icon? = null,
+    @SerialName("icon") val icon: Icon? = null,
     @SerialName("resolved") val resolved: Boolean? = null
 )

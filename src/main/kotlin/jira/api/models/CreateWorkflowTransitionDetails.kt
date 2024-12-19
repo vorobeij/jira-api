@@ -24,8 +24,8 @@ data class CreateWorkflowTransitionDetails(
     @SerialName("from") val from: List<String>? = null,
     @SerialName("name") val name: String,
     @SerialName("properties") val properties: properties? = null,
-    @SerialName("rules") val rules: rules? = null,
-    @SerialName("screen") val screen: screen? = null,
+    @SerialName("rules") val rules: CreateWorkflowTransitionRulesDetails? = null,
+    @SerialName("screen") val screen: CreateWorkflowTransitionScreenDetails? = null,
     @SerialName("to") val to: String,
     @SerialName("type") val type: String
 )

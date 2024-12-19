@@ -38,7 +38,7 @@ data class WorkflowScheme(
     @SerialName("issueTypeMappings") val issueTypeMappings: issueTypeMappings? = null,
     @SerialName("issueTypes") val issueTypes: issueTypes? = null,
     @SerialName("lastModified") val lastModified: String? = null,
-    @SerialName("lastModifiedUser") val lastModifiedUser: lastModifiedUser? = null,
+    @SerialName("lastModifiedUser") val lastModifiedUser: User? = null,
     @SerialName("name") val name: String? = null,
     @SerialName("originalDefaultWorkflow") val originalDefaultWorkflow: String? = null,
     @SerialName("originalIssueTypeMappings") val originalIssueTypeMappings: originalIssueTypeMappings? = null,

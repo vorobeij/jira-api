@@ -11,15 +11,13 @@ import kotlinx.serialization.Serializable
  *
  * @param listWrapperCallbackGroupName, optional
  * @param items, optional
- * @param max-results, optional
- * @param listWrapperCallbackGroupName, optional
+ * @param maxResults, optional
  * @param size, optional
  */
 @Serializable
 data class SimpleListWrapperGroupName(
     @SerialName("listWrapperCallbackGroupName") val listWrapperCallbackGroupName: ListWrapperCallbackGroupName? = null,
     @SerialName("items") val items: List<GroupName>? = null,
-    @SerialName("max-results") val max-results: Int? = null,
-    @SerialName("listWrapperCallbackGroupName") val listWrapperCallbackGroupName: ListWrapperCallbackGroupName? = null,
+    @SerialName("maxResults") val maxResults: Int? = null,
     @SerialName("size") val size: Int? = null
 )

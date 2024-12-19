@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Issue Bulk Edit Payload
@@ -18,7 +19,7 @@ If `true`, dispatches a bulk notification email to users about the updates.
  */
 @Serializable
 data class IssueBulkEditPayload(
-    @SerialName("editedFieldsInput") val editedFieldsInput: editedFieldsInput,
+    @SerialName("editedFieldsInput") val editedFieldsInput: JiraIssueFields,
     @SerialName("selectedActions") val selectedActions: List<String>,
     @SerialName("selectedIssueIdsOrKeys") val selectedIssueIdsOrKeys: List<String>,
     @SerialName("sendBulkNotification") val sendBulkNotification: Boolean = true

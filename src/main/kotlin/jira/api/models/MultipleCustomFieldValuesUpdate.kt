@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * A custom field and its new value with a list of issue to update.
@@ -25,5 +26,5 @@ A list of appropriate values must be provided if the field is of the `list` [col
 data class MultipleCustomFieldValuesUpdate(
     @SerialName("customField") val customField: String,
     @SerialName("issueIds") val issueIds: List<Long>,
-    @SerialName("value") val value: value
+    @SerialName("value") val value: String
 )

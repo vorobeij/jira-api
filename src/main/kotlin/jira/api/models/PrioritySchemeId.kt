@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The ID of a priority scheme.
@@ -15,5 +16,5 @@ import kotlinx.serialization.*
 @Serializable
 data class PrioritySchemeId(
     @SerialName("id") val id: String? = null,
-    @SerialName("task") val task: task? = null
+    @SerialName("task") val task: TaskProgressBeanJsonNode? = null
 )

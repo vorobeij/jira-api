@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  *
@@ -14,7 +15,7 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class RemoveOptionFromIssuesResult(
-    @SerialName("errors") val errors: errors? = null,
+    @SerialName("errors") val errors: SimpleErrorCollection? = null,
     @SerialName("modifiedIssues") val modifiedIssues: List<Long>? = null,
     @SerialName("unmodifiedIssues") val unmodifiedIssues: List<Long>? = null
 )

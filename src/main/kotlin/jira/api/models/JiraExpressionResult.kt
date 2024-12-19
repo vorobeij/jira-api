@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The result of evaluating a Jira expression.
@@ -14,6 +15,6 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class JiraExpressionResult(
-    @SerialName("meta") val meta: meta? = null,
-    @SerialName("value") val value: value
+    @SerialName("meta") val meta: JiraExpressionEvaluationMetaDataBean? = null,
+    @SerialName("value") val value: String
 )

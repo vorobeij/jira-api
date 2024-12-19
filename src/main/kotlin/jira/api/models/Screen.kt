@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * A screen.
@@ -19,5 +20,5 @@ data class Screen(
     @SerialName("description") val description: String? = null,
     @SerialName("id") val id: Long? = null,
     @SerialName("name") val name: String? = null,
-    @SerialName("scope") val scope: scope? = null
+    @SerialName("scope") val scope: Scope? = null
 )

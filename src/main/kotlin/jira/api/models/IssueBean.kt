@@ -27,15 +27,15 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class IssueBean(
-    @SerialName("changelog") val changelog: changelog? = null,
-    @SerialName("editmeta") val editmeta: editmeta? = null,
+    @SerialName("changelog") val changelog: PageOfChangelogs? = null,
+    @SerialName("editmeta") val editmeta: IssueUpdateMetadata? = null,
     @SerialName("expand") val expand: String? = null,
     @SerialName("fields") val fields: fields? = null,
     @SerialName("includedFields") val includedFields: IncludedFields? = null,
     @SerialName("id") val id: String? = null,
     @SerialName("key") val key: String? = null,
     @SerialName("names") val names: names? = null,
-    @SerialName("operations") val operations: operations? = null,
+    @SerialName("operations") val operations: Operations? = null,
     @SerialName("properties") val properties: properties? = null,
     @SerialName("renderedFields") val renderedFields: renderedFields? = null,
     @SerialName("schema") val schema: schema? = null,

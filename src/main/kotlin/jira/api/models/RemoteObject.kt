@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The linked item.
@@ -17,8 +18,8 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class RemoteObject(
-    @SerialName("icon") val icon: icon? = null,
-    @SerialName("status") val status: status? = null,
+    @SerialName("icon") val icon: Icon? = null,
+    @SerialName("status") val status: Status? = null,
     @SerialName("summary") val summary: String? = null,
     @SerialName("title") val title: String,
     @SerialName("url") val url: String

@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  *
@@ -24,13 +25,13 @@ import kotlinx.serialization.*
 data class GetPlanResponse(
     @SerialName("crossProjectReleases") val crossProjectReleases: List<GetCrossProjectReleaseResponse>? = null,
     @SerialName("customFields") val customFields: List<GetCustomFieldResponse>? = null,
-    @SerialName("exclusionRules") val exclusionRules: exclusionRules? = null,
+    @SerialName("exclusionRules") val exclusionRules: GetExclusionRulesResponse? = null,
     @SerialName("id") val id: Long,
     @SerialName("issueSources") val issueSources: List<GetIssueSourceResponse>? = null,
     @SerialName("lastSaved") val lastSaved: String? = null,
     @SerialName("leadAccountId") val leadAccountId: String? = null,
     @SerialName("name") val name: String? = null,
     @SerialName("permissions") val permissions: List<GetPermissionResponse>? = null,
-    @SerialName("scheduling") val scheduling: scheduling,
+    @SerialName("scheduling") val scheduling: GetSchedulingResponse,
     @SerialName("status") val status: String
 )

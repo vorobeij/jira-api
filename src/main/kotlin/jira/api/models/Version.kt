@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about a project version.
@@ -44,7 +45,7 @@ data class Version(
     @SerialName("driver") val driver: String? = null,
     @SerialName("expand") val expand: String? = null,
     @SerialName("id") val id: String? = null,
-    @SerialName("issuesStatusForFixVersion") val issuesStatusForFixVersion: issuesStatusForFixVersion? = null,
+    @SerialName("issuesStatusForFixVersion") val issuesStatusForFixVersion: VersionIssuesStatus? = null,
     @SerialName("moveUnfixedIssuesTo") val moveUnfixedIssuesTo: String? = null,
     @SerialName("name") val name: String? = null,
     @SerialName("operations") val operations: List<SimpleLink>? = null,

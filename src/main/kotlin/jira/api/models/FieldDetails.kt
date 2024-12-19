@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about a field.
@@ -29,7 +30,7 @@ data class FieldDetails(
     @SerialName("name") val name: String? = null,
     @SerialName("navigable") val navigable: Boolean? = null,
     @SerialName("orderable") val orderable: Boolean? = null,
-    @SerialName("schema") val schema: schema? = null,
-    @SerialName("scope") val scope: scope? = null,
+    @SerialName("schema") val schema: JsonTypeBean? = null,
+    @SerialName("scope") val scope: Scope? = null,
     @SerialName("searchable") val searchable: Boolean? = null
 )

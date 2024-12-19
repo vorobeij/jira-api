@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of changes to a priority scheme that require suggested priority mappings.
@@ -18,8 +19,8 @@ import kotlinx.serialization.*
 @Serializable
 data class SuggestedMappingsRequestBean(
     @SerialName("maxResults") val maxResults: Int? = null,
-    @SerialName("priorities") val priorities: priorities? = null,
-    @SerialName("projects") val projects: projects? = null,
+    @SerialName("priorities") val priorities: SuggestedMappingsForPrioritiesRequestBean? = null,
+    @SerialName("projects") val projects: SuggestedMappingsForProjectsRequestBean? = null,
     @SerialName("schemeId") val schemeId: Long? = null,
     @SerialName("startAt") val startAt: Long? = null
 )

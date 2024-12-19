@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of the issue creation metadata for a project.
@@ -19,7 +20,7 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class ProjectIssueCreateMetadata(
-    @SerialName("avatarUrls") val avatarUrls: avatarUrls? = null,
+    @SerialName("avatarUrls") val avatarUrls: AvatarUrlsBean? = null,
     @SerialName("expand") val expand: String? = null,
     @SerialName("id") val id: String? = null,
     @SerialName("issuetypes") val issuetypes: List<IssueTypeIssueCreateMetadata>? = null,

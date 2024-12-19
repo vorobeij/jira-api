@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about a notification.
@@ -18,8 +19,8 @@ import kotlinx.serialization.*
 @Serializable
 data class Notification(
     @SerialName("htmlBody") val htmlBody: String? = null,
-    @SerialName("restrict") val restrict: restrict? = null,
+    @SerialName("restrict") val restrict: NotificationRecipientsRestrictions? = null,
     @SerialName("subject") val subject: String? = null,
     @SerialName("textBody") val textBody: String? = null,
-    @SerialName("to") val to: to? = null
+    @SerialName("to") val to: NotificationRecipients? = null
 )

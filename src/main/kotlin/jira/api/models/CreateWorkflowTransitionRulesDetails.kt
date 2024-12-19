@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The details of a workflow transition rules.
@@ -72,7 +73,7 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class CreateWorkflowTransitionRulesDetails(
-    @SerialName("conditions") val conditions: conditions? = null,
+    @SerialName("conditions") val conditions: CreateWorkflowCondition? = null,
     @SerialName("postFunctions") val postFunctions: List<CreateWorkflowTransitionRule>? = null,
     @SerialName("validators") val validators: List<CreateWorkflowTransitionRule>? = null
 )

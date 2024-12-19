@@ -25,13 +25,13 @@ import kotlinx.serialization.*
 data class HistoryMetadata(
     @SerialName("activityDescription") val activityDescription: String? = null,
     @SerialName("activityDescriptionKey") val activityDescriptionKey: String? = null,
-    @SerialName("actor") val actor: actor? = null,
-    @SerialName("cause") val cause: cause? = null,
+    @SerialName("actor") val actor: HistoryMetadataParticipant? = null,
+    @SerialName("cause") val cause: HistoryMetadataParticipant? = null,
     @SerialName("description") val description: String? = null,
     @SerialName("descriptionKey") val descriptionKey: String? = null,
     @SerialName("emailDescription") val emailDescription: String? = null,
     @SerialName("emailDescriptionKey") val emailDescriptionKey: String? = null,
     @SerialName("extraData") val extraData: extraData? = null,
-    @SerialName("generator") val generator: generator? = null,
+    @SerialName("generator") val generator: HistoryMetadataParticipant? = null,
     @SerialName("type") val type: String? = null
 )

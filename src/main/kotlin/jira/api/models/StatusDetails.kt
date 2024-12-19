@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * A status.
@@ -23,7 +24,7 @@ data class StatusDetails(
     @SerialName("iconUrl") val iconUrl: String? = null,
     @SerialName("id") val id: String? = null,
     @SerialName("name") val name: String? = null,
-    @SerialName("scope") val scope: scope? = null,
+    @SerialName("scope") val scope: Scope? = null,
     @SerialName("self") val self: String? = null,
-    @SerialName("statusCategory") val statusCategory: statusCategory? = null
+    @SerialName("statusCategory") val statusCategory: StatusCategory? = null
 )

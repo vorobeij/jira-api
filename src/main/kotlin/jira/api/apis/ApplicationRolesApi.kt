@@ -20,7 +20,7 @@ interface ApplicationRolesApi {
      * @return List<ApplicationRole>
      */
     @GET("/rest/api/3/applicationrole")
-    suspend fun getAllApplicationRoles(): List<ApplicationRole>
+    suspend fun GetAllApplicationRoles(): List<ApplicationRole>
 
     /**
      * GET /rest/api/3/applicationrole/{key}
@@ -33,7 +33,7 @@ interface ApplicationRolesApi {
      * @return ApplicationRole
      */
     @GET("/rest/api/3/applicationrole/{key}")
-    suspend fun getApplicationRole(
+    suspend fun GetApplicationRole(
         @Body key: String
     ): ApplicationRole
 }

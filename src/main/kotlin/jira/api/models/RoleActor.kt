@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about a user assigned to a project role.
@@ -19,8 +20,8 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class RoleActor(
-    @SerialName("actorGroup") val actorGroup: actorGroup? = null,
-    @SerialName("actorUser") val actorUser: actorUser? = null,
+    @SerialName("actorGroup") val actorGroup: ProjectRoleGroup? = null,
+    @SerialName("actorUser") val actorUser: ProjectRoleUser? = null,
     @SerialName("avatarUrl") val avatarUrl: String? = null,
     @SerialName("displayName") val displayName: String? = null,
     @SerialName("id") val id: Long? = null,

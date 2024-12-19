@@ -175,7 +175,7 @@ interface IssueAttachmentsApi {
      * @return List<Attachment>
      */
     @POST("/rest/api/3/issue/{issueIdOrKey}/attachments")
-    suspend fun addAttachment(
+    suspend fun AddAttachment(
         @Body issueIdOrKey: String,
         @Body body: List<MultipartFile>
     ): List<Attachment>
@@ -199,7 +199,7 @@ interface IssueAttachmentsApi {
      * @return AttachmentArchiveMetadataReadable
      */
     @GET("/rest/api/3/attachment/{id}/expand/human")
-    suspend fun expandAttachmentForHumans(
+    suspend fun ExpandAttachmentForHumans(
         @Body id: String
     ): AttachmentArchiveMetadataReadable
 
@@ -222,7 +222,7 @@ interface IssueAttachmentsApi {
      * @return AttachmentArchiveImpl
      */
     @GET("/rest/api/3/attachment/{id}/expand/raw")
-    suspend fun expandAttachmentForMachines(
+    suspend fun ExpandAttachmentForMachines(
         @Body id: String
     ): AttachmentArchiveImpl
 
@@ -243,7 +243,7 @@ interface IssueAttachmentsApi {
      * @return AttachmentMetadata
      */
     @GET("/rest/api/3/attachment/{id}")
-    suspend fun getAttachment(
+    suspend fun GetAttachment(
         @Body id: String
     ): AttachmentMetadata
 
@@ -264,13 +264,13 @@ interface IssueAttachmentsApi {
      * @param id The ID of the attachment.  (example: null)
      * @param redirect Whether a redirect is provided for the attachment download. Clients that do not automatically follow redirects can set this to `false` to avoid making multiple requests to download the attachment. (optional) (example: null)
      *
-     * @return List<null>
+     * @return List<String>
      */
     @GET("/rest/api/3/attachment/content/{id}")
-    suspend fun getAttachmentContent(
+    suspend fun GetAttachmentContent(
         @Body id: String,
         @Query("redirect") redirect: Boolean = true
-    ): List<null>
+    ): List<String>
 
     /**
      * GET /rest/api/3/attachment/meta
@@ -286,7 +286,7 @@ interface IssueAttachmentsApi {
      * @return AttachmentSettings
      */
     @GET("/rest/api/3/attachment/meta")
-    suspend fun getAttachmentMeta(): AttachmentSettings
+    suspend fun GetAttachmentMeta(): AttachmentSettings
 
     /**
      * GET /rest/api/3/attachment/thumbnail/{id}
@@ -308,14 +308,14 @@ interface IssueAttachmentsApi {
      * @param width The maximum width to scale the thumbnail to. (optional) (example: null)
      * @param height The maximum height to scale the thumbnail to. (optional) (example: null)
      *
-     * @return List<null>
+     * @return List<String>
      */
     @GET("/rest/api/3/attachment/thumbnail/{id}")
-    suspend fun getAttachmentThumbnail(
+    suspend fun GetAttachmentThumbnail(
         @Body id: String,
         @Query("redirect") redirect: Boolean = true,
         @Query("fallbackToDefault") fallbackToDefault: Boolean = true,
         @Query("width") width: Int? = null,
         @Query("height") height: Int? = null
-    ): List<null>
+    ): List<String>
 }

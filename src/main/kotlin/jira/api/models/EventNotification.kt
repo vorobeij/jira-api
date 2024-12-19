@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about a notification associated with an event.
@@ -36,12 +37,12 @@ import kotlinx.serialization.*
 data class EventNotification(
     @SerialName("emailAddress") val emailAddress: String? = null,
     @SerialName("expand") val expand: String? = null,
-    @SerialName("field") val field: field? = null,
-    @SerialName("group") val group: group? = null,
+    @SerialName("field") val field: FieldDetails? = null,
+    @SerialName("group") val group: GroupName? = null,
     @SerialName("id") val id: Long? = null,
     @SerialName("notificationType") val notificationType: String? = null,
     @SerialName("parameter") val parameter: String? = null,
-    @SerialName("projectRole") val projectRole: projectRole? = null,
+    @SerialName("projectRole") val projectRole: ProjectRole? = null,
     @SerialName("recipient") val recipient: String? = null,
-    @SerialName("user") val user: user? = null
+    @SerialName("user") val user: UserDetails? = null
 )

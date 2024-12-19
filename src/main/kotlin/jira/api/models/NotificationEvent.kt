@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about a notification event.
@@ -19,5 +20,5 @@ data class NotificationEvent(
     @SerialName("description") val description: String? = null,
     @SerialName("id") val id: Long? = null,
     @SerialName("name") val name: String? = null,
-    @SerialName("templateEvent") val templateEvent: templateEvent? = null
+    @SerialName("templateEvent") val templateEvent: NotificationEvent? = null
 )

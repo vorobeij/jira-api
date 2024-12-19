@@ -10,7 +10,7 @@ import kotlinx.serialization.Serializable
 /**
  * A list of custom field details.
  *
- * @param _type, required, The type of custom field.
+ * @param type, required, The type of custom field.
  * @param fieldID, required, The custom field ID.
  * @param issueID, required, The issue ID.
  * @param number, optional, The value of number type custom field when `_type` is `NumberIssueField`.
@@ -21,7 +21,7 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class ConnectCustomFieldValue(
-    @SerialName("_type") val _type: String,
+    @SerialName("type") val type: String,
     @SerialName("fieldID") val fieldID: Int,
     @SerialName("issueID") val issueID: Int,
     @SerialName("number") val number: Float? = null,

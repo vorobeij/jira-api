@@ -27,7 +27,7 @@ interface IssueCustomFieldValuesAppsApi {
      * @return Unit
      */
     @POST("/rest/api/3/app/field/value")
-    suspend fun updateMultipleCustomFieldValues(
+    suspend fun UpdateMultipleCustomFieldValues(
         @Query("generateChangelog") generateChangelog: Boolean = true,
         @Body multipleCustomFieldValuesUpdateDetails: MultipleCustomFieldValuesUpdateDetails
     ): Unit

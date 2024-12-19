@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * User details permitted by the user's Atlassian Account privacy settings. However, be aware of these exceptions:
@@ -29,7 +30,7 @@ data class UserDetails(
     @SerialName("accountId") val accountId: String? = null,
     @SerialName("accountType") val accountType: String? = null,
     @SerialName("active") val active: Boolean? = null,
-    @SerialName("avatarUrls") val avatarUrls: avatarUrls? = null,
+    @SerialName("avatarUrls") val avatarUrls: AvatarUrlsBean? = null,
     @SerialName("displayName") val displayName: String? = null,
     @SerialName("emailAddress") val emailAddress: String? = null,
     @SerialName("key") val key: String? = null,

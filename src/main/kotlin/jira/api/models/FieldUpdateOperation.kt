@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of an operation to perform on a field.
@@ -17,9 +18,9 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class FieldUpdateOperation(
-    @SerialName("add") val add: add? = null,
-    @SerialName("copy") val copy: copy? = null,
-    @SerialName("edit") val edit: edit? = null,
-    @SerialName("remove") val remove: remove? = null,
-    @SerialName("set") val set: set? = null
+    @SerialName("add") val add: String? = null,
+    @SerialName("copy") val copy: String? = null,
+    @SerialName("edit") val edit: String? = null,
+    @SerialName("remove") val remove: String? = null,
+    @SerialName("set") val set: String? = null
 )

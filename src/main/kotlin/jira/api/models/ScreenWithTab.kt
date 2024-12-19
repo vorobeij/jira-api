@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * A screen with tab details.
@@ -20,6 +21,6 @@ data class ScreenWithTab(
     @SerialName("description") val description: String? = null,
     @SerialName("id") val id: Long? = null,
     @SerialName("name") val name: String? = null,
-    @SerialName("scope") val scope: scope? = null,
-    @SerialName("tab") val tab: tab? = null
+    @SerialName("scope") val scope: Scope? = null,
+    @SerialName("tab") val tab: ScreenableTab? = null
 )

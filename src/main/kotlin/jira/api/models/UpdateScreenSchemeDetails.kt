@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of a screen scheme.
@@ -17,5 +18,5 @@ import kotlinx.serialization.*
 data class UpdateScreenSchemeDetails(
     @SerialName("description") val description: String? = null,
     @SerialName("name") val name: String? = null,
-    @SerialName("screens") val screens: screens? = null
+    @SerialName("screens") val screens: UpdateScreenTypes? = null
 )

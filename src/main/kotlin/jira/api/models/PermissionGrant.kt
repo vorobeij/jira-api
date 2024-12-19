@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about a permission granted to a user or group.
@@ -16,7 +17,7 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class PermissionGrant(
-    @SerialName("holder") val holder: holder? = null,
+    @SerialName("holder") val holder: PermissionHolder? = null,
     @SerialName("id") val id: Long? = null,
     @SerialName("permission") val permission: String? = null,
     @SerialName("self") val self: String? = null

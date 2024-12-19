@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about a task.
@@ -32,7 +33,7 @@ data class TaskProgressBeanObject(
     @SerialName("lastUpdate") val lastUpdate: Long,
     @SerialName("message") val message: String? = null,
     @SerialName("progress") val progress: Long,
-    @SerialName("result") val result: result? = null,
+    @SerialName("result") val result: String? = null,
     @SerialName("self") val self: String,
     @SerialName("started") val started: Long? = null,
     @SerialName("status") val status: String,

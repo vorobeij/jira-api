@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of the contextual configuration for a custom field.
@@ -17,9 +18,9 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class BulkContextualConfiguration(
-    @SerialName("configuration") val configuration: configuration? = null,
+    @SerialName("configuration") val configuration: String? = null,
     @SerialName("customFieldId") val customFieldId: String,
     @SerialName("fieldContextId") val fieldContextId: String,
     @SerialName("id") val id: String,
-    @SerialName("schema") val schema: schema? = null
+    @SerialName("schema") val schema: String? = null
 )

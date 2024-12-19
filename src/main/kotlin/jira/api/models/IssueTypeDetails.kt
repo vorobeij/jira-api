@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about an issue type.
@@ -29,7 +30,7 @@ data class IssueTypeDetails(
     @SerialName("iconUrl") val iconUrl: String? = null,
     @SerialName("id") val id: String? = null,
     @SerialName("name") val name: String? = null,
-    @SerialName("scope") val scope: scope? = null,
+    @SerialName("scope") val scope: Scope? = null,
     @SerialName("self") val self: String? = null,
     @SerialName("subtask") val subtask: Boolean? = null
 )

@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The request to evaluate a Jira expression. This bean will be replacing `JiraExpressionEvaluateRequest` as part of new `evaluate` endpoint
@@ -14,6 +15,6 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class JiraExpressionEvaluateRequestBean(
-    @SerialName("context") val context: context? = null,
+    @SerialName("context") val context: JiraExpressionEvaluateContextBean? = null,
     @SerialName("expression") val expression: String
 )

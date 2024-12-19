@@ -41,7 +41,7 @@ interface AuditRecordsApi {
      * @return AuditRecords
      */
     @GET("/rest/api/3/auditing/record")
-    suspend fun getAuditRecords(
+    suspend fun GetAuditRecords(
         @Query("offset") offset: Int = 0,
         @Query("limit") limit: Int = 1000,
         @Query("filter") filter: String? = null,

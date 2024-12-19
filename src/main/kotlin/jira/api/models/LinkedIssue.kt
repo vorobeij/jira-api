@@ -4,8 +4,7 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import kotlinx.serialization.*
 
 /**
  * The ID or key of a linked issue.
@@ -17,7 +16,7 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 data class LinkedIssue(
-    @SerialName("fields") val fields: fields? = null,
+    @SerialName("fields") val fields: Fields? = null,
     @SerialName("id") val id: String? = null,
     @SerialName("key") val key: String? = null,
     @SerialName("self") val self: String? = null

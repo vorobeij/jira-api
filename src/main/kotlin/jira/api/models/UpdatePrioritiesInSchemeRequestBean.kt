@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Update priorities in a scheme
@@ -14,6 +15,6 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class UpdatePrioritiesInSchemeRequestBean(
-    @SerialName("add") val add: add? = null,
-    @SerialName("remove") val remove: remove? = null
+    @SerialName("add") val add: PrioritySchemeChangesWithoutMappings? = null,
+    @SerialName("remove") val remove: PrioritySchemeChangesWithMappings? = null
 )

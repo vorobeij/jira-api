@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of a request to bulk edit shareable entity.
@@ -18,8 +19,8 @@ import kotlinx.serialization.*
 @Serializable
 data class BulkEditShareableEntityRequest(
     @SerialName("action") val action: String,
-    @SerialName("changeOwnerDetails") val changeOwnerDetails: changeOwnerDetails? = null,
+    @SerialName("changeOwnerDetails") val changeOwnerDetails: BulkChangeOwnerDetails? = null,
     @SerialName("entityIds") val entityIds: List<Long>,
     @SerialName("extendAdminPermissions") val extendAdminPermissions: Boolean? = null,
-    @SerialName("permissionDetails") val permissionDetails: permissionDetails? = null
+    @SerialName("permissionDetails") val permissionDetails: PermissionDetails? = null
 )

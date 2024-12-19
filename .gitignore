@@ -40,3 +40,18 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/.kotlin/errors/errors-1734610035793.log
+/.kotlin/errors/errors-1734610155141.log
+/.kotlin/errors/errors-1734610222267.log
+/.kotlin/errors/errors-1734610287146.log
+/.kotlin/errors/errors-1734610320780.log
+/.kotlin/errors/errors-1734610356163.log
+/.kotlin/errors/errors-1734610379985.log
+/.kotlin/errors/errors-1734610427191.log
+/.kotlin/errors/errors-1734610451734.log
+/.kotlin/errors/errors-1734610482518.log
+/.kotlin/errors/errors-1734610518867.log
+/.kotlin/errors/errors-1734610540309.log
+/.kotlin/errors/errors-1734610558524.log
+/.kotlin/errors/errors-1734610776158.log
+/src/main/kotlin/jira/api/models/targetStatus.kt

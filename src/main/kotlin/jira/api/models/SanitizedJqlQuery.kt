@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of the sanitized JQL query.
@@ -17,7 +18,7 @@ import kotlinx.serialization.*
 @Serializable
 data class SanitizedJqlQuery(
     @SerialName("accountId") val accountId: String? = null,
-    @SerialName("errors") val errors: errors? = null,
+    @SerialName("errors") val errors: ErrorCollection? = null,
     @SerialName("initialQuery") val initialQuery: String? = null,
     @SerialName("sanitizedQuery") val sanitizedQuery: String? = null
 )

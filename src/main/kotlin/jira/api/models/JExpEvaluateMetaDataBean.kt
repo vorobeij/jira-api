@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Contains information about the expression evaluation. This bean will be replacing `JiraExpressionEvaluationMetaDataBean` bean as part of new `evaluate` endpoint
@@ -14,6 +15,6 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class JExpEvaluateMetaDataBean(
-    @SerialName("complexity") val complexity: complexity? = null,
-    @SerialName("issues") val issues: issues? = null
+    @SerialName("complexity") val complexity: JiraExpressionsComplexityBean? = null,
+    @SerialName("issues") val issues: JExpEvaluateIssuesMetaBean? = null
 )

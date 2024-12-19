@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of a parsed JQL query.
@@ -17,5 +18,5 @@ import kotlinx.serialization.*
 data class ParsedJqlQuery(
     @SerialName("errors") val errors: List<String>? = null,
     @SerialName("query") val query: String,
-    @SerialName("structure") val structure: structure? = null
+    @SerialName("structure") val structure: JqlQuery? = null
 )

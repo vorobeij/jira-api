@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  *
@@ -14,7 +15,7 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class IssueFieldOptionScopeBean(
-    @SerialName("global") val global: global? = null,
+    @SerialName("global") val global: GlobalScopeBean? = null,
     @SerialName("projects") val projects: List<Long>? = null,
     @SerialName("projects2") val projects2: List<ProjectScopeBean>? = null
 )

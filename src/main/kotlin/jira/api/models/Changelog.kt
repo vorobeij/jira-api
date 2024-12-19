@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * A log of changes made to issue fields. Changelogs related to workflow associations are currently being deprecated.
@@ -17,9 +18,9 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class Changelog(
-    @SerialName("author") val author: author? = null,
+    @SerialName("author") val author: UserDetails? = null,
     @SerialName("created") val created: String? = null,
-    @SerialName("historyMetadata") val historyMetadata: historyMetadata? = null,
+    @SerialName("historyMetadata") val historyMetadata: HistoryMetadata? = null,
     @SerialName("id") val id: String? = null,
     @SerialName("items") val items: List<ChangeDetails>? = null
 )

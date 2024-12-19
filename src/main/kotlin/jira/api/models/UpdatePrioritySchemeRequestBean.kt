@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of a priority scheme.
@@ -20,8 +21,8 @@ import kotlinx.serialization.*
 data class UpdatePrioritySchemeRequestBean(
     @SerialName("defaultPriorityId") val defaultPriorityId: Long? = null,
     @SerialName("description") val description: String? = null,
-    @SerialName("mappings") val mappings: mappings? = null,
+    @SerialName("mappings") val mappings: PriorityMapping? = null,
     @SerialName("name") val name: String? = null,
-    @SerialName("priorities") val priorities: priorities? = null,
-    @SerialName("projects") val projects: projects? = null
+    @SerialName("priorities") val priorities: UpdatePrioritiesInSchemeRequestBean? = null,
+    @SerialName("projects") val projects: UpdateProjectsInSchemeRequestBean? = null
 )

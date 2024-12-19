@@ -10,17 +10,17 @@ import kotlinx.serialization.Serializable
 /**
  * A paged list. To access additional details append `[start-index:end-index]` to the expand request. For example, `?expand=sharedUsers[10:40]` returns a list starting at item 10 and finishing at item 40.
  *
- * @param end-index, optional, The index of the last item returned on the page.
+ * @param endIndex, optional, The index of the last item returned on the page.
  * @param items, optional, The list of items.
- * @param max-results, optional, The maximum number of results that could be on the page.
+ * @param maxResults, optional, The maximum number of results that could be on the page.
  * @param size, optional, The number of items on the page.
- * @param start-index, optional, The index of the first item returned on the page.
+ * @param startIndex, optional, The index of the first item returned on the page.
  */
 @Serializable
 data class PagedListUserDetailsApplicationUser(
-    @SerialName("end-index") val end-index: Int? = null,
+    @SerialName("endIndex") val endIndex: Int? = null,
     @SerialName("items") val items: List<UserDetails>? = null,
-    @SerialName("max-results") val max-results: Int? = null,
+    @SerialName("maxResults") val maxResults: Int? = null,
     @SerialName("size") val size: Int? = null,
-    @SerialName("start-index") val start-index: Int? = null
+    @SerialName("startIndex") val startIndex: Int? = null
 )

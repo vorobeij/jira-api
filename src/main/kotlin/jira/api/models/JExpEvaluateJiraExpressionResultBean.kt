@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * The result of evaluating a Jira expression.This bean will be replacing `JiraExpressionResultBean` bean as part of new evaluate endpoint
@@ -14,6 +15,6 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class JExpEvaluateJiraExpressionResultBean(
-    @SerialName("meta") val meta: meta? = null,
-    @SerialName("value") val value: value
+    @SerialName("meta") val meta: JExpEvaluateMetaDataBean? = null,
+    @SerialName("value") val value: String
 )

@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * A workflow scheme along with a list of projects that use it.
@@ -15,5 +16,5 @@ import kotlinx.serialization.*
 @Serializable
 data class WorkflowSchemeAssociations(
     @SerialName("projectIds") val projectIds: List<String>,
-    @SerialName("workflowScheme") val workflowScheme: workflowScheme
+    @SerialName("workflowScheme") val workflowScheme: WorkflowScheme
 )

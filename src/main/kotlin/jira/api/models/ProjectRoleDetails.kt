@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about a project role.
@@ -27,7 +28,7 @@ data class ProjectRoleDetails(
     @SerialName("id") val id: Long? = null,
     @SerialName("name") val name: String? = null,
     @SerialName("roleConfigurable") val roleConfigurable: Boolean? = null,
-    @SerialName("scope") val scope: scope? = null,
+    @SerialName("scope") val scope: Scope? = null,
     @SerialName("self") val self: String? = null,
     @SerialName("translatedName") val translatedName: String? = null
 )

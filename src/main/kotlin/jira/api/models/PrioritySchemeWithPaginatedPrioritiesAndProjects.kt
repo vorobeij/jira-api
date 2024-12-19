@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * A priority scheme with paginated priorities and projects.
@@ -27,7 +28,7 @@ data class PrioritySchemeWithPaginatedPrioritiesAndProjects(
     @SerialName("id") val id: String,
     @SerialName("isDefault") val isDefault: Boolean? = null,
     @SerialName("name") val name: String,
-    @SerialName("priorities") val priorities: priorities? = null,
-    @SerialName("projects") val projects: projects? = null,
+    @SerialName("priorities") val priorities: PageBeanPriorityWithSequence? = null,
+    @SerialName("projects") val projects: PageBeanProjectDetails? = null,
     @SerialName("self") val self: String? = null
 )

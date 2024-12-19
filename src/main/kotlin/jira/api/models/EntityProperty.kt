@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * An entity property, for more information see [Entity properties](https://developer.atlassian.com/cloud/jira/platform/jira-entity-properties/).
@@ -15,5 +16,5 @@ import kotlinx.serialization.*
 @Serializable
 data class EntityProperty(
     @SerialName("key") val key: String? = null,
-    @SerialName("value") val value: value? = null
+    @SerialName("value") val value: String? = null
 )

@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details of the projects the option is available in.
@@ -15,5 +16,5 @@ import kotlinx.serialization.*
 @Serializable
 data class IssueFieldOptionConfiguration(
     @SerialName("attributes") val attributes: List<String>? = null,
-    @SerialName("scope") val scope: scope? = null
+    @SerialName("scope") val scope: IssueFieldOptionScopeBean? = null
 )

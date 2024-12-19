@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about data policies for a project.
@@ -14,6 +15,6 @@ import kotlinx.serialization.*
  */
 @Serializable
 data class ProjectWithDataPolicy(
-    @SerialName("dataPolicy") val dataPolicy: dataPolicy? = null,
+    @SerialName("dataPolicy") val dataPolicy: ProjectDataPolicy? = null,
     @SerialName("id") val id: Long? = null
 )

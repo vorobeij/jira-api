@@ -4,7 +4,8 @@
  */
 package jira.api.models
 
-import kotlinx.serialization.*
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Details about a created issue or subtask.
@@ -20,6 +21,6 @@ data class CreatedIssue(
     @SerialName("id") val id: String? = null,
     @SerialName("key") val key: String? = null,
     @SerialName("self") val self: String? = null,
-    @SerialName("transition") val transition: transition? = null,
-    @SerialName("watchers") val watchers: watchers? = null
+    @SerialName("transition") val transition: NestedResponse? = null,
+    @SerialName("watchers") val watchers: NestedResponse? = null
 )
