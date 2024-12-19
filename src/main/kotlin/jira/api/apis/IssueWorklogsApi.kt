@@ -4,8 +4,15 @@
  */
 package jira.api.apis
 
-import jira.api.models.*
-import retrofit2.http.*
+import jira.api.models.ChangedWorklogs
+import jira.api.models.PageOfWorklogs
+import jira.api.models.Worklog
+import jira.api.models.WorklogIdsRequestBean
+import jira.api.models.WorklogsMoveRequestBean
+import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface IssueWorklogsApi {
 
@@ -42,10 +49,10 @@ interface IssueWorklogsApi {
     suspend fun addWorklog(
         @Body issueIdOrKey: String,
         @Query("notifyUsers") notifyUsers: Boolean = true,
-        @Query("adjustEstimate") adjustEstimate: String = auto,
+        @Query("adjustEstimate") adjustEstimate: String = "auto",
         @Query("newEstimate") newEstimate: String? = null,
         @Query("reduceBy") reduceBy: String? = null,
-        @Query("expand") expand: String =,
+        @Query("expand") expand: String = "",
         @Query("overrideEditableFlag") overrideEditableFlag: Boolean = false,
         @Body worklog: Worklog
     ): Unit
@@ -83,7 +90,7 @@ interface IssueWorklogsApi {
     @POST("/rest/api/3/issue/{issueIdOrKey}/worklog/move")
     suspend fun bulkMoveWorklogs(
         @Body issueIdOrKey: String,
-        @Query("adjustEstimate") adjustEstimate: String = auto,
+        @Query("adjustEstimate") adjustEstimate: String = "auto",
         @Query("overrideEditableFlag") overrideEditableFlag: Boolean = false,
         @Body worklogsMoveRequestBean: WorklogsMoveRequestBean
     ): Unit
@@ -128,7 +135,7 @@ interface IssueWorklogsApi {
     @GET("/rest/api/3/worklog/updated")
     suspend fun getIdsOfWorklogsModifiedSince(
         @Query("since") since: Long = 0,
-        @Query("expand") expand: String =
+        @Query("expand") expand: String = ""
     ): ChangedWorklogs
 
     /**
@@ -161,7 +168,7 @@ interface IssueWorklogsApi {
         @Query("maxResults") maxResults: Int = 5000,
         @Query("startedAfter") startedAfter: Long? = null,
         @Query("startedBefore") startedBefore: Long? = null,
-        @Query("expand") expand: String =
+        @Query("expand") expand: String = ""
     ): PageOfWorklogs
 
     /**
@@ -190,7 +197,7 @@ interface IssueWorklogsApi {
     suspend fun getWorklog(
         @Body issueIdOrKey: String,
         @Body id: String,
-        @Query("expand") expand: String =
+        @Query("expand") expand: String = ""
     ): Worklog
 
     /**
@@ -211,7 +218,7 @@ interface IssueWorklogsApi {
      */
     @POST("/rest/api/3/worklog/list")
     suspend fun getWorklogsForIds(
-        @Query("expand") expand: String =,
+        @Query("expand") expand: String = "",
         @Body worklogIdsRequestBean: WorklogIdsRequestBean
     ): List<Worklog>
 }

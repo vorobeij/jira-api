@@ -4,8 +4,21 @@
  */
 package jira.api.apis
 
-import jira.api.models.*
-import retrofit2.http.*
+import jira.api.models.IdSearchRequestBean
+import jira.api.models.IdSearchResults
+import jira.api.models.IssueMatches
+import jira.api.models.IssuePickerSuggestions
+import jira.api.models.IssuesAndJQLQueries
+import jira.api.models.JQLCountRequestBean
+import jira.api.models.JQLCountResultsBean
+import jira.api.models.SearchAndReconcileRequestBean
+import jira.api.models.SearchAndReconcileResults
+import jira.api.models.SearchRequestBean
+import jira.api.models.SearchResults
+import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface IssueSearchApi {
 
@@ -249,7 +262,7 @@ interface IssueSearchApi {
         @Query("jql") jql: String? = null,
         @Query("startAt") startAt: Int = 0,
         @Query("maxResults") maxResults: Int = 50,
-        @Query("validateQuery") validateQuery: String = strict,
+        @Query("validateQuery") validateQuery: String = "strict",
         @Query("fields") fields: List<String>? = null,
         @Query("expand") expand: String? = null,
         @Query("properties") properties: List<String>? = null,

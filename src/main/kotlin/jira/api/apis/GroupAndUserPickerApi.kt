@@ -4,8 +4,9 @@
  */
 package jira.api.apis
 
-import jira.api.models.*
-import retrofit2.http.*
+import jira.api.models.FoundUsersAndGroups
+import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface GroupAndUserPickerApi {
 
@@ -55,7 +56,7 @@ interface GroupAndUserPickerApi {
         @Query("fieldId") fieldId: String? = null,
         @Query("projectId") projectId: List<String>? = null,
         @Query("issueTypeId") issueTypeId: List<String>? = null,
-        @Query("avatarSize") avatarSize: String = xsmall,
+        @Query("avatarSize") avatarSize: String = "xsmall",
         @Query("caseInsensitive") caseInsensitive: Boolean = false,
         @Query("excludeConnectAddons") excludeConnectAddons: Boolean = false
     ): FoundUsersAndGroups

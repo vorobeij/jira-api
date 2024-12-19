@@ -4,8 +4,11 @@
  */
 package jira.api.apis
 
-import jira.api.models.*
-import retrofit2.http.*
+import jira.api.models.WorkflowTransitionProperty
+import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface WorkflowTransitionPropertiesApi {
 
@@ -28,7 +31,7 @@ interface WorkflowTransitionPropertiesApi {
         @Body transitionId: Long,
         @Query("key") key: String,
         @Query("workflowName") workflowName: String,
-        @Query("workflowMode") workflowMode: String = live,
+        @Query("workflowMode") workflowMode: String = "live",
         @Body workflowTransitionProperty: WorkflowTransitionProperty
     ): WorkflowTransitionProperty
 
@@ -52,6 +55,6 @@ interface WorkflowTransitionPropertiesApi {
         @Query("includeReservedKeys") includeReservedKeys: Boolean = false,
         @Query("key") key: String? = null,
         @Query("workflowName") workflowName: String,
-        @Query("workflowMode") workflowMode: String = live
+        @Query("workflowMode") workflowMode: String = "live"
     ): WorkflowTransitionProperty
 }

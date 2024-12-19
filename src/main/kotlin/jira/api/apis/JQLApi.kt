@@ -112,7 +112,7 @@ interface JQLApi {
      */
     @POST("/rest/api/3/jql/parse")
     suspend fun parseJqlQueries(
-        @Query("validation") validation: String = strict,
+        @Query("validation") validation: String = "strict",
         @Body jqlQueriesToParse: JqlQueriesToParse
     ): ParsedJqlQueries
 

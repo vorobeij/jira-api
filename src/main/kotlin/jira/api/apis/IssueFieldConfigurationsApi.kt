@@ -101,7 +101,7 @@ interface IssueFieldConfigurationsApi {
         @Query("maxResults") maxResults: Int = 50,
         @Query("id") id: List<Long>? = null,
         @Query("isDefault") isDefault: Boolean = false,
-        @Query("query") query: String =
+        @Query("query") query: String = ""
     ): PageBeanFieldConfigurationDetails
 
     /**

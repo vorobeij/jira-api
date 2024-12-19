@@ -52,9 +52,9 @@ interface IssueTypeSchemesApi {
         @Query("startAt") startAt: Long = 0,
         @Query("maxResults") maxResults: Int = 50,
         @Query("id") id: List<Long>? = null,
-        @Query("orderBy") orderBy: String = id,
-        @Query("expand") expand: String =,
-        @Query("queryString") queryString: String =
+        @Query("orderBy") orderBy: String = "id",
+        @Query("expand") expand: String = "",
+        @Query("queryString") queryString: String = ""
     ): PageBeanIssueTypeScheme
 
     /**

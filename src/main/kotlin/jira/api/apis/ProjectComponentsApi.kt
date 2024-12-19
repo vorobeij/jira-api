@@ -111,7 +111,7 @@ interface ProjectComponentsApi {
     @GET("/rest/api/3/project/{projectIdOrKey}/components")
     suspend fun getProjectComponents(
         @Body projectIdOrKey: String,
-        @Query("componentSource") componentSource: String = jira
+        @Query("componentSource") componentSource: String = "jira"
     ): List<ProjectComponent>
 
     /**
@@ -144,7 +144,7 @@ interface ProjectComponentsApi {
         @Query("startAt") startAt: Long = 0,
         @Query("maxResults") maxResults: Int = 50,
         @Query("orderBy") orderBy: String? = null,
-        @Query("componentSource") componentSource: String = jira,
+        @Query("componentSource") componentSource: String = "jira",
         @Query("query") query: String? = null
     ): PageBeanComponentWithIssueCount
 }

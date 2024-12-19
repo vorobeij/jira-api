@@ -49,8 +49,8 @@ interface ScreenSchemesApi {
         @Query("startAt") startAt: Long = 0,
         @Query("maxResults") maxResults: Int = 25,
         @Query("id") id: List<Long>? = null,
-        @Query("expand") expand: String =,
-        @Query("queryString") queryString: String =,
+        @Query("expand") expand: String = "",
+        @Query("queryString") queryString: String = "",
         @Query("orderBy") orderBy: String? = null
     ): PageBeanScreenScheme
 }

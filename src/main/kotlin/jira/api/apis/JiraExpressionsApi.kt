@@ -4,8 +4,15 @@
  */
 package jira.api.apis
 
-import jira.api.models.*
-import retrofit2.http.*
+import jira.api.models.JExpEvaluateJiraExpressionResultBean
+import jira.api.models.JiraExpressionEvalRequestBean
+import jira.api.models.JiraExpressionEvaluateRequestBean
+import jira.api.models.JiraExpressionForAnalysis
+import jira.api.models.JiraExpressionResult
+import jira.api.models.JiraExpressionsAnalysis
+import retrofit2.http.Body
+import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface JiraExpressionsApi {
 
@@ -30,7 +37,7 @@ interface JiraExpressionsApi {
      */
     @POST("/rest/api/3/expression/analyse")
     suspend fun analyseExpression(
-        @Query("check") check: String = syntax,
+        @Query("check") check: String = "syntax",
         @Body jiraExpressionForAnalysis: JiraExpressionForAnalysis
     ): JiraExpressionsAnalysis
 

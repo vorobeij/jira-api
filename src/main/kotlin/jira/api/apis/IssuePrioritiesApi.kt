@@ -80,12 +80,12 @@ interface IssuePrioritiesApi {
      */
     @GET("/rest/api/3/priority/search")
     suspend fun searchPriorities(
-        @Query("startAt") startAt: String = 0,
-        @Query("maxResults") maxResults: String = 50,
+        @Query("startAt") startAt: String = "0",
+        @Query("maxResults") maxResults: String = "50",
         @Query("id") id: List<String>? = null,
         @Query("projectId") projectId: List<String>? = null,
-        @Query("priorityName") priorityName: String =,
+        @Query("priorityName") priorityName: String = "",
         @Query("onlyDefault") onlyDefault: Boolean = false,
-        @Query("expand") expand: String =
+        @Query("expand") expand: String = ""
     ): PageBeanPriority
 }

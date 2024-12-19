@@ -90,8 +90,8 @@ interface IssueSecuritySchemesApi {
      */
     @GET("/rest/api/3/issuesecurityschemes/level/member")
     suspend fun getSecurityLevelMembers(
-        @Query("startAt") startAt: String = 0,
-        @Query("maxResults") maxResults: String = 50,
+        @Query("startAt") startAt: String = "0",
+        @Query("maxResults") maxResults: String = "50",
         @Query("id") id: List<String>? = null,
         @Query("schemeId") schemeId: List<String>? = null,
         @Query("levelId") levelId: List<String>? = null,
@@ -118,8 +118,8 @@ interface IssueSecuritySchemesApi {
      */
     @GET("/rest/api/3/issuesecurityschemes/level")
     suspend fun getSecurityLevels(
-        @Query("startAt") startAt: String = 0,
-        @Query("maxResults") maxResults: String = 50,
+        @Query("startAt") startAt: String = "0",
+        @Query("maxResults") maxResults: String = "50",
         @Query("id") id: List<String>? = null,
         @Query("schemeId") schemeId: List<String>? = null,
         @Query("onlyDefault") onlyDefault: Boolean = false
@@ -138,8 +138,8 @@ interface IssueSecuritySchemesApi {
      */
     @GET("/rest/api/3/issuesecurityschemes/project")
     suspend fun searchProjectsUsingSecuritySchemes(
-        @Query("startAt") startAt: String = 0,
-        @Query("maxResults") maxResults: String = 50,
+        @Query("startAt") startAt: String = "0",
+        @Query("maxResults") maxResults: String = "50",
         @Query("issueSecuritySchemeId") issueSecuritySchemeId: List<String>? = null,
         @Query("projectId") projectId: List<String>? = null
     ): PageBeanIssueSecuritySchemeToProjectMapping
@@ -162,8 +162,8 @@ interface IssueSecuritySchemesApi {
      */
     @GET("/rest/api/3/issuesecurityschemes/search")
     suspend fun searchSecuritySchemes(
-        @Query("startAt") startAt: String = 0,
-        @Query("maxResults") maxResults: String = 50,
+        @Query("startAt") startAt: String = "0",
+        @Query("maxResults") maxResults: String = "50",
         @Query("id") id: List<String>? = null,
         @Query("projectId") projectId: List<String>? = null
     ): PageBeanSecuritySchemeWithProjects

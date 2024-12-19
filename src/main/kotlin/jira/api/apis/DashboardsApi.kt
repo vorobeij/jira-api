@@ -247,10 +247,10 @@ interface DashboardsApi {
         @Query("groupname") groupname: String? = null,
         @Query("groupId") groupId: String? = null,
         @Query("projectId") projectId: Long? = null,
-        @Query("orderBy") orderBy: String = name,
+        @Query("orderBy") orderBy: String = "name",
         @Query("startAt") startAt: Long = 0,
         @Query("maxResults") maxResults: Int = 50,
-        @Query("status") status: String = active,
+        @Query("status") status: String = "active",
         @Query("expand") expand: String? = null
     ): PageBeanDashboard
 }

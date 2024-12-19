@@ -175,7 +175,7 @@ interface FiltersApi {
         @Query("groupId") groupId: String? = null,
         @Query("projectId") projectId: Long? = null,
         @Query("id") id: List<Long>? = null,
-        @Query("orderBy") orderBy: String = name,
+        @Query("orderBy") orderBy: String = "name",
         @Query("startAt") startAt: Long = 0,
         @Query("maxResults") maxResults: Int = 50,
         @Query("expand") expand: String? = null,

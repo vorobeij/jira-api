@@ -69,8 +69,8 @@ interface IssueNotificationSchemesApi {
      */
     @GET("/rest/api/3/notificationscheme/project")
     suspend fun getNotificationSchemeToProjectMappings(
-        @Query("startAt") startAt: String = 0,
-        @Query("maxResults") maxResults: String = 50,
+        @Query("startAt") startAt: String = "0",
+        @Query("maxResults") maxResults: String = "50",
         @Query("notificationSchemeId") notificationSchemeId: List<String>? = null,
         @Query("projectId") projectId: List<String>? = null
     ): PageBeanNotificationSchemeAndProjectMappingJsonBean
@@ -101,8 +101,8 @@ interface IssueNotificationSchemesApi {
      */
     @GET("/rest/api/3/notificationscheme")
     suspend fun getNotificationSchemes(
-        @Query("startAt") startAt: String = 0,
-        @Query("maxResults") maxResults: String = 50,
+        @Query("startAt") startAt: String = "0",
+        @Query("maxResults") maxResults: String = "50",
         @Query("id") id: List<String>? = null,
         @Query("projectId") projectId: List<String>? = null,
         @Query("onlyDefault") onlyDefault: Boolean = false,

@@ -74,8 +74,8 @@ interface IssueResolutionsApi {
      */
     @GET("/rest/api/3/resolution/search")
     suspend fun searchResolutions(
-        @Query("startAt") startAt: String = 0,
-        @Query("maxResults") maxResults: String = 50,
+        @Query("startAt") startAt: String = "0",
+        @Query("maxResults") maxResults: String = "50",
         @Query("id") id: List<String>? = null,
         @Query("onlyDefault") onlyDefault: Boolean = false
     ): PageBeanResolutionJsonBean

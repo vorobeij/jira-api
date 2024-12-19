@@ -4,8 +4,15 @@
  */
 package jira.api.apis
 
-import jira.api.models.*
-import retrofit2.http.*
+import jira.api.models.CreatePrioritySchemeDetails
+import jira.api.models.PageBeanPrioritySchemeWithPaginatedPrioritiesAndProjects
+import jira.api.models.PageBeanPriorityWithSequence
+import jira.api.models.PageBeanProject
+import jira.api.models.SuggestedMappingsRequestBean
+import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface PrioritySchemesApi {
 
@@ -40,9 +47,9 @@ interface PrioritySchemesApi {
      */
     @GET("/rest/api/3/priorityscheme/priorities/available")
     suspend fun getAvailablePrioritiesByPriorityScheme(
-        @Query("startAt") startAt: String = 0,
-        @Query("maxResults") maxResults: String = 50,
-        @Query("query") query: String =,
+        @Query("startAt") startAt: String = "0",
+        @Query("maxResults") maxResults: String = "50",
+        @Query("query") query: String = "",
         @Query("schemeId") schemeId: String,
         @Query("exclude") exclude: List<String>? = null
     ): PageBeanPriorityWithSequence
@@ -61,8 +68,8 @@ interface PrioritySchemesApi {
      */
     @GET("/rest/api/3/priorityscheme/{schemeId}/priorities")
     suspend fun getPrioritiesByPriorityScheme(
-        @Query("startAt") startAt: String = 0,
-        @Query("maxResults") maxResults: String = 50,
+        @Query("startAt") startAt: String = "0",
+        @Query("maxResults") maxResults: String = "50",
         @Body schemeId: String
     ): PageBeanPriorityWithSequence
 
@@ -85,13 +92,13 @@ interface PrioritySchemesApi {
      */
     @GET("/rest/api/3/priorityscheme")
     suspend fun getPrioritySchemes(
-        @Query("startAt") startAt: String = 0,
-        @Query("maxResults") maxResults: String = 50,
+        @Query("startAt") startAt: String = "0",
+        @Query("maxResults") maxResults: String = "50",
         @Query("priorityId") priorityId: List<Long>? = null,
         @Query("schemeId") schemeId: List<Long>? = null,
-        @Query("schemeName") schemeName: String =,
+        @Query("schemeName") schemeName: String = "",
         @Query("onlyDefault") onlyDefault: Boolean = false,
-        @Query("orderBy") orderBy: String = +name,
+        @Query("orderBy") orderBy: String = "+name",
         @Query("expand") expand: String? = null
     ): PageBeanPrioritySchemeWithPaginatedPrioritiesAndProjects
 
@@ -111,11 +118,11 @@ interface PrioritySchemesApi {
      */
     @GET("/rest/api/3/priorityscheme/{schemeId}/projects")
     suspend fun getProjectsByPriorityScheme(
-        @Query("startAt") startAt: String = 0,
-        @Query("maxResults") maxResults: String = 50,
+        @Query("startAt") startAt: String = "0",
+        @Query("maxResults") maxResults: String = "50",
         @Query("projectId") projectId: List<Long>? = null,
         @Body schemeId: String,
-        @Query("query") query: String =
+        @Query("query") query: String = ""
     ): PageBeanProject
 
     /**

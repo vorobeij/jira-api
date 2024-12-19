@@ -99,7 +99,7 @@ interface TeamsInPlanApi {
     @GET("/rest/api/3/plans/plan/{planId}/team")
     suspend fun getTeams(
         @Body planId: Long,
-        @Query("cursor") cursor: String =,
+        @Query("cursor") cursor: String = "",
         @Query("maxResults") maxResults: Int = 50
     ): PageWithCursorGetTeamResponseForPage
 }

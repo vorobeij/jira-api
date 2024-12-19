@@ -91,9 +91,9 @@ interface IssueTypeScreenSchemesApi {
         @Query("startAt") startAt: Long = 0,
         @Query("maxResults") maxResults: Int = 50,
         @Query("id") id: List<Long>? = null,
-        @Query("queryString") queryString: String =,
-        @Query("orderBy") orderBy: String = id,
-        @Query("expand") expand: String =
+        @Query("queryString") queryString: String = "",
+        @Query("orderBy") orderBy: String = "id",
+        @Query("expand") expand: String = ""
     ): PageBeanIssueTypeScreenScheme
 
     /**
@@ -116,7 +116,7 @@ interface IssueTypeScreenSchemesApi {
         @Body issueTypeScreenSchemeId: Long,
         @Query("startAt") startAt: Long = 0,
         @Query("maxResults") maxResults: Int = 50,
-        @Query("query") query: String =
+        @Query("query") query: String = ""
     ): PageBeanProjectDetails
 
     /**

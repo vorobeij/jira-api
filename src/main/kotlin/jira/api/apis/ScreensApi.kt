@@ -77,7 +77,7 @@ interface ScreensApi {
         @Query("startAt") startAt: Long = 0,
         @Query("maxResults") maxResults: Int = 100,
         @Query("id") id: List<Long>? = null,
-        @Query("queryString") queryString: String =,
+        @Query("queryString") queryString: String = "",
         @Query("scope") scope: List<String>? = null,
         @Query("orderBy") orderBy: String? = null
     ): PageBeanScreen

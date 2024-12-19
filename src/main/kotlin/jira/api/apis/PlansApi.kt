@@ -79,7 +79,7 @@ interface PlansApi {
     suspend fun getPlans(
         @Query("includeTrashed") includeTrashed: Boolean = false,
         @Query("includeArchived") includeArchived: Boolean = false,
-        @Query("cursor") cursor: String =,
+        @Query("cursor") cursor: String = "",
         @Query("maxResults") maxResults: Int = 50
     ): PageWithCursorGetPlanResponseForPage
 }
